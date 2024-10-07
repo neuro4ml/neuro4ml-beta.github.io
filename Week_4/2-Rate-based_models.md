@@ -1,8 +1,8 @@
-# Rate-based models
+# Rate-Based Models
 
-[Download the slides here](slides/W4-V1-rate-based-models.pptx)
+[Download the slides here](W4-V1-rate-based-models.pptx)
 
-:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?end=4
 :width: 100%
 :::
 ---
@@ -11,20 +11,20 @@
 In this section we'll talk about rate-based Hebbian models of learning.
 :::
 
-```{danger} Work in progress
-The text below has been transcribed by hand from the video above but has not yet been reviewed. Please use the videos and slides as the primary material and the text as support until I have a chance to proofread everything. When I have done this, I will remove this message.
-```
+## General Form
 
-## General form
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?start=4&end=34
+:width: 100%
+:::
 
 We'll only discuss learning of a synaptic weight $\color{#0f73bf}{w}$, in response to a pre-synaptic neuron firing spikes at a rate $\color{#b35f10}{r_{pre}}$, and a post-synaptic neuron firing at a rate $\color{#b80909}{r_{post}}$.
 
-```{figure} figures/Picture1.png
+```{figure} Picture1.png
 :width: 300px
 :align: center
 ```
 
-We model this with a [differential equation](#hebbian-rule-eq) saying that the weight changes at a rate $\color{purple}{\tau_w}$ proportionate to some function $F$ of the weight and the pre- and post-synaptic weights.
+We model this with a [differential equation](hebbian-rule-eq) saying that the weight changes at a rate $\color{purple}{\tau_w}$ proportionate to some function $F$ of the weight and the pre- and post-synaptic weights.
 
 (hebbian-rule-eq)=
 ```{math}
@@ -33,7 +33,11 @@ We model this with a [differential equation](#hebbian-rule-eq) saying that the w
 
 Different functions $F$ give you different models.
 
-## Simplest possible Hebbian rule
+## Simplest Possible Hebbian Rule
+
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?start=34&end=110
+:width: 100%
+:::
 
 That's quite abstract, so let's take a look at a concrete example.
 
@@ -50,28 +54,28 @@ But we can already see a problem with this. There’s no reason for the weight t
 One solution is to have a hard bound, just clip w at some maximum value.
 
 ```{math}
-\begin{gather}
 \text{Hard Bound:} \\
 \text{Fix } 0 \le \textcolor{#0f73bf}{w} \le w^{max}
-\end{gather}
 ```
 
-Another solution is a softer bound which just reduces the rate of change of the weight as you get close to the maximum value. There are various ways you can do this, [this equation](#soft-bound-eq) is just one example.
+Another solution is a softer bound which just reduces the rate of change of the weight as you get close to the maximum value. There are various ways you can do this, [this equation](soft-bound-eq) is just one example.
 
 (soft-bound-eq)=
 ```{math}
-\begin{gather}
 \text{Soft Bound:} \\
 \textcolor{purple}{\tau_w} \frac{d \textcolor{#0f73bf}{w}}{dt} = \text{const } \cdot (w^{max} - \textcolor{#0f73bf}{w}) \cdot \textcolor{#b35f10}{r_{pre}} \textcolor{#b80909}{r_{post}}
-\end{gather}
 ```
 
 Another problem is that in this simple formulation, the weight will only grow, never get smaller, since both the pre- and post-synaptic firing rates are always positive. It is possible to fix this by adding another term, but let’s move on to another model.
 
-## Oja's learning rule
+## Oja's Learning Rule
+
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?start=110&end=191
+:width: 100%
+:::
 
 Oja’s learning rule was designed to solve the problem of the weights growing without bound.
-You take the standard [Hebbian rule](#hebbian-rule-eq) and subtract off a term proportionate to the product of the weight and the square of the postsynaptic firing rate.
+You take the standard [Hebbian rule](hebbian-rule-eq) and subtract off a term proportionate to the product of the weight and the square of the postsynaptic firing rate.
 In other words, after growing for a while the weights will stop changing.
 
 ```{math}
@@ -94,23 +98,27 @@ With these assumptions, we can rewrite the learning rules like this, using a dot
 \text{Single neuron output scalar } y = \sum_i w_i x_i = \bold{w}^T \bold{x} = \bold{w \cdot x}
 ```
 
-```{figure} figures/Picture3.png
+```{figure} Picture3.png
 :label: single-vector
 :width: 250px
 :align: center
 ```
 
-With these assumptions, we can rewrite the learning rules [like this](#learning-rule-eq), using a dot above the $\bold{w}$ to indicate a derivative, and replacing 1 over time constant with $\gamma$.
+With these assumptions, we can rewrite the learning rules [like this](learning-rule-eq), using a dot above the $\bold{w}$ to indicate a derivative, and replacing 1 over time constant with $\gamma$.
 
 (learning-rule-eq)=
 ```{math}
 \bold{\dot{w}} = \gamma (\bold{x} y - \bold{w} y^2) \text{ where } \gamma = \frac{1}{\tau_w}
 ```
 
-## Oja's learning rule analysis
+## Oja's Learning Rule Analysis
 
-Now let's get into the hairy mathematical analysis. You might want to work through this on a piece of paper. We start with the same setup up as [before](#single-vector), with a vector of inputs and a single output.
-The rate of change of the weight follows [this equation](#weigth-eq), and the output $y$ [this equation](#output-eq). Note that since $y$ is a scalar, the dot product of weight $\bold{w}$ and input $\bold{x}$, we can write $\bold{w}^T \bold{x}$ or $\bold{x}^T \bold{w}$.
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?start=191&end=338
+:width: 100%
+:::
+
+Now let's get into the hairy mathematical analysis. You might want to work through this on a piece of paper. We start with the same setup up as [before](single-vector), with a vector of inputs and a single output.
+The rate of change of the weight follows [this equation](weigth-eq), and the output $y$ [this equation](output-eq). Note that since $y$ is a scalar, the dot product of weight $\bold{w}$ and input $\bold{x}$, we can write $\bold{w}^T \bold{x}$ or $\bold{x}^T \bold{w}$.
 
 (weigth-eq)=
 ```{math}
@@ -134,21 +142,21 @@ Expanding out w dot, we get this:
 \langle \bold{x} y - \bold{w} y^2 \rangle = 0
 ```
 
-Replacing $y$ with either $\bold{w}^T \bold{x}$ or $\bold{x}^T \bold{w}$ you get [this](#expanded-eq) – you’ll see why we did it like this in a moment.
+Replacing $y$ with either $\bold{w}^T \bold{x}$ or $\bold{x}^T \bold{w}$ you get [this](expanded-eq) – you’ll see why we did it like this in a moment.
 
 (expanded-eq)=
 ```{math}
 \bold{\langle x(x}^T \bold{w) \rangle - \langle (w}^T \bold{x)(x}^T \bold{w)w \rangle} = 0
 ```
 
-Note that the mean of $\bold{x x}^T$ is $\bold{C}$ the covariance matrix of $\bold{x}$. Using this, we can rewrite the equation [above](#expanded-eq) like [this](#covariance-eq).
+Note that the mean of $\bold{x x}^T$ is $\bold{C}$ the covariance matrix of $\bold{x}$. Using this, we can rewrite the equation [above](expanded-eq) like [this](covariance-eq).
 
 (covariance-eq)=
 ```{math}
 \bold{Cw - w}^T \bold{Cww} = 0
 ```
 
-Since $\bold{w}^T \bold{Cw}$ is a scalar, which we'll call $\lambda$, [this equation](#covariance-eq) becomes:
+Since $\bold{w}^T \bold{Cw}$ is a scalar, which we'll call $\lambda$, [this equation](covariance-eq) becomes:
 
 ```{math}
 \bold{Cw} = \lambda \bold{w} \text{ where } \lambda = \bold{w}^T \bold{Cw} \text{ is a scalar}
@@ -168,19 +176,21 @@ We set its derivative to 0, and by expanding that out in components we can see t
 0 = \langle \frac{d}{dt} \bold{w} ^T \bold{w} \rangle = \langle \frac{d}{dt} \sum_i w_i^2 \rangle = \langle \sum_i 2 \dot{w_i} w_i \rangle = 2 \langle \bold{w}^T \bold{\dot{w}} \rangle
 ```
 
-Expanding the derivative out using the formula we calculated [above](#norm-eq), we get a second $\lambda$ term appearing and this simplifies to $\lambda (1 - |\bold{w}|^2)$.
+Expanding the derivative out using the formula we calculated [above](norm-eq), we get a second $\lambda$ term appearing and this simplifies to $\lambda (1 - |\bold{w}|^2)$.
 
 ```{math}
-\begin{gather}
 0 = \langle \bold{w} ^T \bold{\dot{w}} \rangle = \bold{w}^T (\bold{Cw -} \lambda \bold{w}) \\
 = \bold{w}^T \bold{Cw} - \lambda \bold{w}^T \bold{w} = \lambda \bold{w} - \lambda \bold{w}^T \bold{w} \\
 = \lambda (1 - |\bold{w}|^2)
-\end{gather}
 ```
 
 In other words, we get weight normalisation from Oja’s rule.
 
-## BCM rule
+## BCM Rule
+
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?start=338&end=560
+:width: 100%
+:::
 
 We’ve seen that Oja’s rule keeps weights bounded and leads to the neuron learning principal components. Another approach is the BCM rule, named after Bienenstock, Cooper and Munro.
 Their aim was a model of the development of selectivity in the visual cortex, and so they set out to find a learning rule that maximises selectivity. They defined this as 1 minus the mean response of the network divided by the maximum. In other words, for high selectivity, overall, the network should respond very little, but for certain inputs it should have a very strong response.
@@ -189,7 +199,7 @@ Their aim was a model of the development of selectivity in the visual cortex, an
 1 - \frac{\text{mean ressponse of network}}{\text{maximum response of network}}
 ```
 
-Their rule multiplies the simple [Hebbian rule](#hebbian-rule-eq) from before with a term that can be positive or negative. It’s positive if the postsynaptic firing rate is high, and negative if it’s low. High and low and controlled by a threshold $\textcolor{#18a326}{\theta}$.
+Their rule multiplies the simple [Hebbian rule](hebbian-rule-eq) from before with a term that can be positive or negative. It’s positive if the postsynaptic firing rate is high, and negative if it’s low. High and low and controlled by a threshold $\textcolor{#18a326}{\theta}$.
 
 ```{math}
 \textcolor{purple}{\tau_w} \frac{d \textcolor{#0f73bf}{w}}{dt} = \textcolor{#b35f10}{r_{pre}} \textcolor{#b80909}{r_{post}} (\textcolor{#b80909}{r_{post}} - \textcolor{#18a326}{\theta})
@@ -197,7 +207,7 @@ Their rule multiplies the simple [Hebbian rule](#hebbian-rule-eq) from before wi
 
 This means that synapses can get stronger or weaker. The intuition here is that it promotes selectivity because those inputs that cause a high firing rate will be driven even higher, and those with a low firing rate even lower. However, you can already see that if $\textcolor{#18a326}{\theta}$ is just a constant, there’s nothing to stop this from blowing up. Once the post-synaptic firing rate goes above $\textcolor{#18a326}{\theta}$ it can just keep growing without bounds.
 
-```{figure} figures/Picture4.png
+```{figure} Picture4.png
 :align: center
 :width: 300px
 ```
@@ -213,9 +223,9 @@ Now if $\textcolor{#b80909}{r_{post}}$ gets too large, the threshold will increa
 (BCM-selectivity)=
 It also encourages selectivity because if $\textcolor{#b80909}{r_{post}}$ is equal to $\textcolor{#18a326}{\theta}$ as it would be if all inputs led to the same output, then you’d be at this fixed point. This is unstable as a slight perturbation would push you away from the fixed point. Hence this rule is making sure you don’t settle in a fixed point where the selectivity is low. You can imagine that at the start of learning, the output firing rate is low for all inputs, but higher for some than others. The threshold will lower until one of the inputs gives a rate above the threshold. At that point, the weights that respond to this input will get stronger. This increase in the firing rate will cause the threshold to increase, and so the weights corresponding to all the other inputs will decrease, and the network will end up selective to just that one preferred input.
 
-Sure enough, you can see that happening in [their model](#model-graph) of orientation selectivity in the visual cortex. Over time, the selectivity increases, and the end result is a network with a strong preference for one particular orientation. This qualitatively matches what happens in development.
+Sure enough, you can see that happening in [their model](model-graph) of orientation selectivity in the visual cortex. Over time, the selectivity increases, and the end result is a network with a strong preference for one particular orientation. This qualitatively matches what happens in development.
 
-```{figure} figures/Picture5.png
+```{figure} Picture5.png
 :label: model-graph
 :align: center
 :width: 500px
@@ -226,6 +236,10 @@ Model of orientation selectivity in the visual cortex
 Incidentally, you might wonder why do we take the square of the firing rate. Well, the exact choice of taking the square isn’t essential. It’s only important that it be nonlinear for reasons we won’t go in to here.
 
 ## Summary
+
+:::{iframe} https://www.youtube.com/embed/UIPn7COOYcg?start=560
+:width: 100%
+:::
 
 We’ve seen how Hebb’s principle can be translated into learning models based on firing rates, and that this can generate quite interesting computational properties like doing principal component analysis or developing feature selectivity. However, it misses an important feature which is the timing of spikes. 
 

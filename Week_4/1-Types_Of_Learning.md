@@ -2,7 +2,7 @@
 
 [Download the slides here](slides/W4-V0-types-of-learning.pptx)
 
-:::{iframe} https://www.youtube.com/embed/JeXwbbU2rlQ
+:::{iframe} https://www.youtube.com/embed/JeXwbbU2rlQ?end=16
 :width: 100%
 :::
 ---
@@ -13,13 +13,17 @@ The text below has been transcribed by hand from the video above but has not yet
 
 ## Introduction
 
-This week is about learning. How it happens in the brain, what models we have, and how those models relate to algorithms from machine learning. 
+This week is about learning. How it happens in the brain, what models we have, and how those models relate to algorithms from machine learning.
 
 :::{attention} Note!
 Before we get into the details, in this section we'll start with an overview of what types of learning there are and the different mechanisms they could use.
 :::
 
 ## What is learning?
+
+:::{iframe} https://www.youtube.com/embed/JeXwbbU2rlQ?start=16&end=29
+:width: 100%
+:::
 
 Abstractly what do we mean by learning? Something like: any change to behaviour in the face of experience. In other words, any change that leads to different behaviour can count and there's a lot of things we could change in our brains.
 
@@ -32,6 +36,10 @@ What is learning?
 ```
 
 ## Mechanisms
+
+:::{iframe} https://www.youtube.com/embed/JeXwbbU2rlQ?start=29&end=136
+:width: 100%
+:::
 
 In principle, anything that modifies our behaviour could be a component of learning. We’re all familiar with the idea of modifying synaptic weights to change the function of a neural network. This is usually what is meant by learning in a machine learning context.
 
@@ -53,6 +61,10 @@ Neural Network Modifications and Mechanisms
 ```
 
 ## Categories
+
+:::{iframe} https://www.youtube.com/embed/JeXwbbU2rlQ?start=136
+:width: 100%
+:::
 
 Let’s quickly look at some of the categories we need to keep in mind when discussing learning in the next few sections.
 One of the most important ideas is [Hebbian learning](#hebbian), which we’ve seen before.

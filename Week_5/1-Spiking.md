@@ -2,8 +2,9 @@
 
 [Download the slides here](slides/W5-V0-spiking-is-not-differentiable.pptx)
 
-:::{iframe} https://www.youtube.com/embed/0fNiTc-0t2k
+:::{iframe} https://www.youtube.com/embed/0fNiTc-0t2k?end=7
 :width: 100%
+:align: center
 :::
 ---
 
@@ -16,6 +17,11 @@ In this section, we’ll focus on how to train spiking neural networks. But firs
 :::
 
 ## What we want to do
+
+:::{iframe} https://www.youtube.com/embed/0fNiTc-0t2k?start=7&end=65
+:width: 100%
+:align: center
+:::
 
 What we’d like to do is to use the methods developed for artificial neural networks, because we know they work really well.
 
@@ -90,6 +96,11 @@ So, can we just do this for a spiking neural network? It’s not quite so easy. 
 
 ## Why we can't do it
 
+:::{iframe} https://www.youtube.com/embed/0fNiTc-0t2k?start=65&end=163
+:width: 100%
+:align: center
+:::
+
 To see what goes wrong here, let’s start with a [recap](#LIFrecap) of the [leaky integrate-and-fire neuron](#LIF-section) we’ve seen before.
 
 Over time it evolves according to a differential equation, with instantaneous effects when a spike arrives. Whenever the membrane potential $v$ crosses the threshold $v>1$ you fire a spike and instantly reset to $0$.
@@ -148,6 +159,11 @@ That means the gradients are zero almost everywhere. Which means that gradient d
 So, how do we solve this problem?
 
 ## So what can we do?
+
+:::{iframe} https://www.youtube.com/embed/0fNiTc-0t2k?start=163
+:width: 100%
+:align: center
+:::
 
 Well there's a lot of different approaches that have been tried and that we'll talk about in the remaining sections this week. There's no ideal solution, so in this final part of this section we'll quickly talk about the general approaches people have tried and some of their different issues.
 

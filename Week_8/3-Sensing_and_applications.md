@@ -2,7 +2,7 @@
 
 [Download the slides here](slides/W8-V2-sensing-and-applications.pptx)
 
-:::{iframe} https://www.youtube.com/embed/Uwht2Y6xLj4
+:::{iframe} https://www.youtube.com/embed/Uwht2Y6xLj4?end=8
 :width: 100%
 :::
 ---
@@ -16,6 +16,10 @@ In this section we’re going to just do a very quick introduction to some of th
 :::
 
 ## Why do we need neuromorphic sensing?
+
+:::{iframe} https://www.youtube.com/embed/Uwht2Y6xLj4?start=8&end=80
+:width: 100%
+:::
 
 So let’s start by asking why would we even need specific neuromorphic sensing devices?
 Couldn’t we just take the output of a standard camera for example, convert that to spikes and then feed it into a neuromorphic computing device? Well yes, but if we start thinking about the amount of data transfer involved, we can start to see a problem.
@@ -71,6 +75,10 @@ The bad side is that the algorithm design is much harder, as we’ve seen throug
 
 ## Application: image deblurring by Prophesée
 
+:::{iframe} https://www.youtube.com/embed/Uwht2Y6xLj4?start=80&end=105
+:width: 100%
+:::
+
 We just wanted to show one nice recent example of this from the French company Prophesée who are using a hybrid of standard cameras and event cameras on a mobile phone to remove blur from fast moving images.
 You can see in [this video](#prophesee-vid) how the high frame rate of the event camera allows you to see the motion at a much higher temporal resolution.
 They then use this to remove blur from the pixels that change fastest, and get a much nicer image as a result.
@@ -82,6 +90,10 @@ They then use this to remove blur from the pixels that change fastest, and get a
 :::
 
 ## Other neuromorphic sensing devices
+
+:::{iframe} https://www.youtube.com/embed/Uwht2Y6xLj4?start=105&end=120
+:width: 100%
+:::
 
 Vision isn’t the only sense that has a corresponding neuromorphic version.
 There are auditory sensors, for example you can see [here](#silicon-cochela) some of the spikes produced by this system.
@@ -95,6 +107,10 @@ There are auditory sensors, for example you can see [here](#silicon-cochela) som
 And there are also olfactory sensors – the  sense of smell – and tactile sensors – the sense of touch.
 
 ## Robotics
+
+:::{iframe} https://www.youtube.com/embed/Uwht2Y6xLj4?start=120
+:width: 100%
+:::
 
 We're going to finish this week with one nice robotics application from Katie Schuman.
 She used this [robotic car](#robotic-car), controlled with the **mu Caspian neuromorphic computing device**.

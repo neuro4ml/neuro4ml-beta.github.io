@@ -2,8 +2,9 @@
 
 [Download the slides here](slides/W5-V1-limited-gradients.pptx)
 
-:::{iframe} https://www.youtube.com/embed/XnNcOLASZX0
+:::{iframe} https://www.youtube.com/embed/XnNcOLASZX0?end=10
 :width: 100%
+:align: center
 :::
 ---
 
@@ -17,6 +18,11 @@ In this secction we’ll look at some of the many methods for training spiking n
 :::
 
 ## Reservoir computing
+
+:::{iframe} https://www.youtube.com/embed/XnNcOLASZX0?start=10&end=85
+:width: 100%
+:align: center
+:::
 
 Let’s start with reservoir computing, also known as liquid state machines and echo state networks in different contexts.
 
@@ -60,6 +66,11 @@ See the following:
 :::
 
 ## Evolutionary algorithms
+
+:::{iframe} https://www.youtube.com/embed/XnNcOLASZX0?start=85&end=145
+:width: 100%
+:align: center
+:::
 
 Another approach is to use global optimisation algorithms that don’t require derivatives.
 
@@ -121,6 +132,11 @@ Robot Controlled by Trained Neuromorphic Hardware Trajectory Map (See [paper](ht
 
 ## Converting artificial to spiking neural networks
 
+:::{iframe} https://www.youtube.com/embed/XnNcOLASZX0?start=145&end=221
+:width: 100%
+:align: center
+:::
+
 Rather than trying to work with spiking neural networks directly, we can start by doing something we know how to do, like training an artificial neural network, and then convert the result into a spiking neural network.
 
 There’s a huge literature on this but I’m just going to mention two approaches from [Chris Eliasmith and colleagues](https://doi.org/10.48550/arXiv.1510.08829).
@@ -147,6 +163,11 @@ They implemented this in a comprehensive software package [Nengo](https://www.ne
 Once you have these building blocks, it’s easy to then convert an ANN that is composed of these building blocks into their framework and implement it with spiking neurons.
 
 ## Restricting to a Single Spike
+
+:::{iframe} https://www.youtube.com/embed/XnNcOLASZX0?start=221
+:width: 100%
+:align: center
+:::
 
 The last method we’ll look at today is making the network differentiable by limiting each neuron to only be able to fire a single spike.
 

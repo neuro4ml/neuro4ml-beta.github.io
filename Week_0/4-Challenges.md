@@ -1,16 +1,23 @@
-# Challenges for machine learning and neuroscience
+# Challenges for Machine Learning and Neuroscience
 
-[Download the slides here](slides/W0-V3-challenges.pptx)
+[Download the slides here](W0-V3-challenges.pptx)
 
-:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y
+:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y?end=10
 :width: 100%
 :align: center
 :::
 ---
 
+:::{attention} Note!
 In the last section this week, we want to talk about some of the challenges for machine learning and for neuroscience, and how we think these two fields can help each other to make progress.
+:::
 
-## Power efficiency
+## Power Efficiency
+
+:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y?start=10&end=80
+:width: 100%
+:align: center
+:::
 
 Let’s start by talking about **power efficiency**.
 
@@ -28,9 +35,12 @@ By the next year, DeepMind had implemented AlphaGo Zero which played better than
 
 Still very inefficient, but it only took a year to improve by a factor of 50 or more, so I wouldn’t bet against the machines on this.
 
-![](figures/power-efficiency.png)
+## Sample Efficiency
 
-## Sample efficiency
+:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y?start=80&end=123
+:width: 100%
+:align: center
+:::
 
 There is another challenge for machine learning though, which is how much training it needs to reach high levels of performance.
 
@@ -38,19 +48,22 @@ AlphaGo Zero was trained on over 5 million games.
 
 We don’t know how many games Lee Sedol played, but at the time of that match he was 33, and assuming he started playing at age 5 and played 5 matches a day every day from then on, he would only have played around 50,000 games.
 
-![](figures/sample-efficiency.png)
-
 That’s not entirely fair of course because he was making use of the collective knowledge of all humans who have ever played this game. But then AlphaGo was also able to use this and it turned out that it didn’t help very much.
 
 The training was a little faster, but it actually capped out at a lower performance at the end of training.
 
-:::{seealso}
+:::{seealso} For more
 :class: dropdown
 * [AlphaGo The Movie](https://www.youtube.com/watch?v=WXuK6gekU1Y)
-* {cite:t}`https://doi.org/10.1038/nature24270`
+* [Silver et al. (2017) "Mastering the game of Go without human knowledge"](https://doi.org/10.1038/nature24270)
 :::
 
-## Generalisation and re-use
+## Generalisation and Re-Use
+
+:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y?start=123&end=182
+:width: 100%
+:align: center
+:::
 
 One of the reasons for this is that humans have a lot of knowledge they can call on and use in new scenarios, and machine learning methods still lag behind in this – although progress is fast.
 
@@ -64,39 +77,44 @@ If you just move the paddle a bit higher, a human player has no problem at all a
 
 Similarly, adding an unbreakable wall in grey.
 
-```{figure} figures/paddle.png
+```{figure} paddle.png
 :label: paddlegame
 :alt: Paddle Game Test Cases For Human vs Machine Retraining
 :align: center
 
-Paddle game test cases for human vs machine retraining (see [Vicarious 2016 on schema networks](https://www.vicarious.com/posts/general-game-playing-with-schema-networks/) and {cite:t}`https://doi.org/10.48550/arXiv.1706.04317`)
+Paddle Game Test Cases For Human vs Machine Retraining (See [Vicarious 2016 on Schema networks](https://www.vicarious.com/posts/general-game-playing-with-schema-networks/) and [preprint](https://doi.org/10.48550/arXiv.1706.04317))
 ```
 Another example is an analysis of human learning of Atari games that were famously mastered by deep RL.
 
 This study found that for some of the games, in under 15 minutes of training, humans could learn to play at a similar or better level than the deep RL agents after tens or even hundreds of hours of play.
 
-```{figure} figures/atarigame.png
+```{figure} atarigame.png
 :label: atarigame
 :alt: Learning Curves For Humans vs Machine in Atari Games
 :align: center
 
-Learning curves for humans vs machine in Atari games ([paper](https://core.ac.uk/download/pdf/141473125.pdf)).
+Learning Curves For Humans vs Machine in Atari Games (See [paper](https://core.ac.uk/download/pdf/141473125.pdf))
 ```
 
 ## Robustness
 
-The last challenge we want to talk about for machine learning in this section is robustness.
+:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y?start=182&end=258
+:width: 100%
+:align: center
+:::
+
+The last challenge we want to talk about for machine learning in this video is robustness.
 
 Although the situation has improved recently, machine learning solutions tend to be brittle and prone to break. There are lots of different aspects to this, and the previous part on generalisation and re-use is one example.
 
 Another way of seeing it is that they are prone to manipulation, what is sometimes called an adversarial attack.
 
-```{figure} figures/braintask.png
+```{figure} braintask.png
 :label: attack
 :alt: Example of Adversarial Attack
 :align: center
 
-Example of adversarial attack {cite:p}`https://doi.org/10.48550/arXiv.1412.6572`.
+Example of Adversarial Attack (See [paper](https://doi.org/10.48550/arXiv.1412.6572))
 ```
 
 Already this tells us that whatever this network is doing, it’s quite different to the way that humans recognise images.
@@ -105,78 +123,91 @@ Part of the answer is known, that these networks treat texture as more important
 
 [Here](#cat) you can see if you take a picture of a cat and give it the texture of an elephant it’s recognised as an elephant although most people would still have said cat.
 
-```{figure} figures/catpic.png
+```{figure} catpic.png
 :label: cat
 :alt: Cat Textural Image vs Content
 :align: center
-:width: 500px
 
-From {cite:t}`https://doi.org/10.48550/arXiv.1811.12231`.
+Cat Textural Manipulation Image vs Content (See [paper](https://doi.org/10.48550/arXiv.1811.12231))
 ```
 
 But you don’t even have to be as sophisticated as that, you can just slap on a bit of text and get it to change its mind.
 
-```{figure} figures/textslap.png
+```{figure} textslap.png
 :label: slap
 :alt: Apple Manipulation Using Text
 :align: center
-:width: 450px
 
-From {cite:t}`https://doi.org/10.23915/distill.00030`.
+Apple Manipulation Using Text (See [paper](https://doi.org/10.23915/distill.00030))
 ```
 These are just a few examples of what is a huge field, studying what it is that neural networks are learning, how to exploit it and how to defend against that.
 
-## Challenges for neuroscience
+## Challenges for Neuroscience
+
+:::{iframe} https://www.youtube.com/embed/dNiLUIfp79Y?end=258
+:width: 100%
+:align: center
+:::
 
 But now we want to turn away from machine learning and talk about some of the challenges for neuroscience. For the first one, you might know that scientists like to study mice running around mazes. You might imagine something like [this](#mm1).
 
 
-```{figure} figures/mousemaze1.png
+```{figure} mousemaze1.png
 :label: mm1
 :alt: Mouse Maze Experiment
 :align: center
 
-Mouse maze experiment.
+Mouse Maze Experiment
 ```
 
 Or if you’ve been visiting the English countryside a lot, maybe [this](#hedge)?
 
-```{figure} figures/hedgemaze.jpg
+```{figure} hedgemaze.png
 :label: hedge
 :alt: Hedge Maze
 :align: center
 
-Hedge maze.
+Hedge Maze
 ```
 
 But the reality is very often more like [this](#mm2). **In neuroscience, our experiments are usually incredible simple, often coming down to a binary choice.**
 
-```{figure} figures/realisticmaze.png
+```{figure} realisticmaze.png
 :label: mm2
 :alt: Realistic Mouse Maze Experiment
 :align: center
 
-Realistic mouse maze experiment.
+Realistic Mouse Maze Experiment
 ```
 
 There’s a good reason for that. It’s hard to train animals to do these experiments and you want an easy way to interpret the results. But it does mean that we’re studying animals to try to understand intelligent behaviour, but we’re doing it with tasks that don’t really require any intelligence.
 
 It’s not clear that this is good enough if we really want to understand intelligence.
 
-And the same is true of our models. One of the most challenging datasets for biologically realistic spiking neural networks is the [Spiking Heidelberg Digits dataset](#dataset), which is a database with only twenty spoken words to classify {cite:p}`https://doi.org/10.1109/TNNLS.2020.3044364`.
+And the same is true of our models. One of the most challenging datasets for biologically realistic spiking neural networks is the [Spiking Heidelberg Digits dataset](#dataset), which is a database with only twenty spoken words to classify.
 
-```{figure} figures/heidelberg.png
+```{figure} heidelberg.png
 :label: dataset
 :alt: Spiking Heidelberg Digits Dataset
 :align: center
 
-Spiking Heidelberg Digits dataset, from {cite:t}`https://doi.org/10.1109/TNNLS.2020.3044364`.
+Spiking Heidelberg Digits Dataset
 ```
 
 Despite that, in recent years we’ve seen a new focus in neuroscience on challenging tasks of the sort that are common in machine learning, and it has led to a huge amount of exciting new work.
 
+:::{seealso} For more
+:class: dropdown
+
+[Cramer et al. (2022) "The Heidelberg Spiking Data Sets for the Systematic Evaluation of Spiking Neural Networks"](https://doi.org/10.1109/TNNLS.2020.3044364)
+
+:::
+
+:::{seealso} That's it!
 Historically, neuroscience and machine learning were tightly linked and that led to some fantastic and groundbreaking work in both fields.
 
 Our bet is we’ll make more progress in both fields if people know what’s going on in the other one.
 
 We hope you’ll enjoy the course!
+:::
+

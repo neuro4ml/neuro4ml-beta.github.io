@@ -1,15 +1,11 @@
 # Observing
 
-[Download the slides here](slides/W6-V0-observing.pptx)
+[Download the slides here](W6-V0-observing.pptx)
 
-:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?end=10
 :width: 100%
 :::
 ---
-
-```{danger} Work in progress
-The text below has been transcribed by hand from the video above but has not yet been reviewed. Please use the videos and slides as the primary material and the text as support until I have a chance to proofread everything. When I have done this, I will remove this message.
-```
 
 ## Introduction
 
@@ -21,13 +17,18 @@ In this section we'll think about what it actually means to understand neural ne
 
 ## Understanding
 
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?start=65&end=90
+:width: 100%
+:::
+
 Again, we can think of both artificial neural networks and brains as computing input-output transformations: from sensory stimuli to behavior.
 But how do all of a networks features; like its unit properties, architecture and activity patterns combine to implement these transformations?
 Both neuroscientists and machine learning researchers are interested in this question for a variety of reasons like: using knowledge from biology to improve artificial neural networks or building brain-machine interfaces – which record neural activity and use it to control various devices.
 This section will cover three topics related to understanding neural networks – how to:
+
 * Observe neural activity,
-* analyze it, and 
-* manipulate it. 
+* analyze it, and
+* manipulate it.
 
 So how can we observe activity?
 
@@ -36,37 +37,47 @@ In a spiking neural network we can pass spikes into the network and record its h
 
 But in a biological system we need to choose how we're going to record neural activity.
 
-```{figure} figures/sensorimotor.png
+```{figure} sensorimotor.png
 :label: SensTransformation
-:alt: Example ANN
+:alt: Example {abbr}`ANN(Artificial Neural Network)`
 :align: center
 ```
 
-## Recording neural activity
+## Recording Neural Activity
+
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?start=90&end=145
+:width: 100%
+:::
 
 There are different methods for recording neural activity, with different pros and cons, but one way to describe them is on a 2d axis where: 
 
 * The x-axis – shows the methods temporal resolution 
 * The y-axis – shows the number of neurons the method can record simultaneously
 
-```{figure} figures/observingPicture1.png
+```{figure}observingPicture1.png
 :label: axis
 :align: center
 :width: 500px
 ```
 
-In previous sections we introduced electrophysiology <!-- find a link to this --> – a technique which lets you record a single neuron with high temporal resolution, so that would sit [here](#axis) on this graph.  
+In previous sections we introduced electrophysiology <!-- find a link to this --> – a technique which lets you record a single neuron with high temporal resolution, so that would sit [here](axis) on this graph.  
 
 To get data from more neurons, with this approach, studies will often record different neurons sequentially over trials and then pool the data over trials and subjects. But even so, you're often limited to tens to hundreds of neurons and pooling them in this way isn't ideal. 
 
-So how can we record more neurons simultaneously? 
+:::{hint} Linker
+So how can we record more neurons simultaneously?
+:::
 
 ## Neuropixels
 
-One approach is to use high-density probes, like the Neuropixels probe shown in [panel c](#neuropixels-pic).
-The main part of this probe is its extremely thin shank, which is inserted into the brain surgically, and is covered with hundreds of recording sites; which are shown schematically in [panel A](#neuropixels-pic) and in a microscope image in [panel B](#neuropixels-pic).
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?start=145&end=243
+:width: 100%
+:::
 
-```{figure} figures/observingPicture2.png
+One approach is to use high-density probes, like the Neuropixels probe shown in [panel c](neuropixels-pic).
+The main part of this probe is its extremely thin shank, which is inserted into the brain surgically, and is covered with hundreds of recording sites; which are shown schematically in [panel A](neuropixels-pic) and in a microscope image in [panel B](neuropixels-pic).
+
+```{figure}observingPicture2.png
 :label: neuropixels-pic
 :align: center
 :width: 700px
@@ -75,7 +86,7 @@ High-density probes results for simultaneous neuron recording (See [paper](https
 ```
 
 These sites record nearby electrical activity, and so each sites' signal results from the combined activity of many neurons. However, from this data it's possible to infer the underlying spiking activity of individual neurons, using spike-sorting algorithms which make use of the fact that different neurons have distinct spike shapes. 
-And so, these probes allow you to record from hundreds to thousands of neurons simultaneously. For example, in the raster plots on the [right](#neuropixels-pic):
+And so, these probes allow you to record from hundreds to thousands of neurons simultaneously. For example, in the raster plots on the [right](neuropixels-pic):
 
 * The y-axis shows the recording sites along the shank
 * The x-axis shows time in seconds
@@ -85,10 +96,14 @@ These probes represent a huge technological advance. But, it's worth keeping in
 
 So how can we get more comprehensive coverage? 
 
-## Calcium imaging
+## Calcium Imaging
 
-One alternative is calcium imaging. 
-Remember that when an action potentials reaches the axon terminal, it causes voltage-gated calcium channels to open, and calcium to flow into the cell. So we can use changes in calcium concentration to infer neural activity. 
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?start=243&end=346
+:width: 100%
+:::
+
+One alternative is calcium imaging.
+Remember that when an action potentials reaches the axon terminal, it causes voltage-gated calcium channels to open, and calcium to flow into the cell. So we can use changes in calcium concentration to infer neural activity.
 
 Using this approach we can measure neural activity in roughly 4 steps:
 
@@ -97,9 +112,9 @@ Using this approach we can measure neural activity in roughly 4 steps:
 * Third, we need to put our specimen under a microscope and measure each neurons change in fluorescence over time.
 * Then finally, we can analyze either the continuous changes in fluorescence or we can infer the underlying spikes using deconvolution algorithms.  
 
-The end result of this is shown [here](#calcium-imaging-pic) in a larval zebrafish. The brain is shown from a top-down (or dorsal view), as well as from the front and side. Brain structure is shown in grey, and then calcium activity is overlaid in red-yellow, and the video is played at about 20 times real-time.
+The end result of this is shown [here](calcium-imaging-pic) in a larval zebrafish. The brain is shown from a top-down (or dorsal view), as well as from the front and side. Brain structure is shown in grey, and then calcium activity is overlaid in red-yellow, and the video is played at about 20 times real-time.
 
-:::{figure} figures/Media1.mp4
+:::{figure}Media1.mp4
 :label: calcium-imaging-pic
 :width: 500px
 
@@ -110,7 +125,11 @@ While you can use this technique in any animal model, it works particularly well
 
 ## fMRI
 
-In humans, one of the most commonly used methods is functional magnetic resonance imaging or fMRI: which measures changes in blood flow to regions of the brain. As more active areas require more oxygen, and vice versa, this serves as another proxy for neural activity. 
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?start=346&end=407
+:width: 100%
+:::
+
+In humans, one of the most commonly used methods is functional magnetic resonance imaging or fMRI: which measures changes in blood flow to regions of the brain. As more active areas require more oxygen, and vice versa, this serves as another proxy for neural activity.
 
 fMRI is widely used as it is: 
 
@@ -118,24 +137,31 @@ fMRI is widely used as it is:
 * It provides whole-brain information.
 * It has reasonable spatial and temporal resolution on the order of millimeters and seconds.  
 
-Though it is worth keeping in mind that it's a proximy measure of neural activity, and even though the spatial resolution is on the order of millimeters, each cube or voxel (the smallest measured spatial unit in fMRI) will still contain around 1 million neurons.
+Though it is worth keeping in mind that it's a proximy measure of neural acctivity, and even though the spatial resolution is on the order of millimeters, each cube or voxel (the smallest measured spatial unit in fMRI) will still contain around 1 million neurons.
 
-```{figure} figures/observingPicture4.png
+```{figure}observingPicture4.png
 :label: fmrifig
 :align: center
 :width: 400px
 
 fMRI Benefits and Challenges (See [paper](https://doi.org/10.1038/s41586-023-06670-9))
 ```
-Okay, stepping back a bit, lets approximately map these techniques onto our axis.
 
-## Recording neural activity
+:::{hint} Linker
+Okay, stepping back a bit, lets approximately map these techniques onto our axis.
+:::
+
+## Recording Neural Activity
+
+:::{iframe} https://www.youtube.com/embed/c8JCgX5JPBw?start=407
+:width: 100%
+:::
 
 * High-density probes like Neuropixels have high temporal resolution and can record from hundreds to thousands of neurons.
 * Whole-brain calcium imaging has medium temporal resolution, but can record from thousands to tens-of-thousands of neurons.
 * fMRI has slow temporal resolution. Though it's hard to place in terms of number of neurons as it records a whole-brain signal, but can’t resolve individual neurons.
 
-```{figure} figures/observingPicture5.png
+```{figure}observingPicture5.png
 :align: center
 :width: 600px
 ```

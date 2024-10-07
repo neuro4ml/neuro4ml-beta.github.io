@@ -1,8 +1,8 @@
-# Why neuroscience?
+# Why Neuroscience?
 
-[Download the slides here](slides/W0-V0-why-neuroscience.pptx)
+[Download the slides here](W0-V0-why-neuroscience.pptx)
 
-:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA
+:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA?end=14
 :width: 100%
 :align: center
 :::
@@ -10,56 +10,93 @@
 
 ## Introduction
 
-Welcome to **Neuroscience for Machine Learners!**
+:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA?start=15&end=19
+:width: 100%
+:align: center
+:::
 
-As the name suggests, this course is intended for people with a background in machine learning who want to learn a bit about neuroscience. It runs in person at Imperial College London, as well as being freely available online.
+Welcome to **Neuroscience for machine learners!**
 
-So let’s start by talking about why you should be interested in neuroscience.
+As the name suggests, this course is intended for people with a background in machine learning who want to learn a bit about neuroscience. It runs in person at [Imperial College London](https://ror.org/041kmwe10), as well as being freely available online.
+
+:::{attention} Note!
+So let’s start  by talking about why you should be interested in neuroscience.
+:::
 
 ## Neuroscience ❤️ Machine Learning
+
+:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA?start=19&end=37
+:width: 100%
+:align: center
+:::
 
 One reason is that machine learning and neuroscience have had a really rich history of influencing each other:
 
 * From the [neuron to the perceptron](#n2p)
 * Or from the [retina to the convolutional neural network](#r2cnn).
 
-```{figure} figures/neuron2perceptron.jpg
+```{figure} neuron2perceptron.png
 :label: n2p
 :alt: Neuron to Perceptron
 :align: center
+
+Neuron to Perceptron
 ```
 
-```{figure} figures/retina2cnn.jpg
+```{figure} retina2cnn.png
 :label: r2cnn
 :alt: Retina to Convolutional Neural Network
 :align: center
+
+Retina to Convolutional Neural Network
 ```
 
 In recent years they have started to drift apart, but that could change and knowing a bit of neuroscience could help with that. After all, the human brain can still easily solve some [tasks](#braintask) that we can't yet solve with machine learning.
 
-```{figure} figures/braintask.png
+:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA?start=37&end=52
+:width: 100%
+:align: center
+:::
+
+```{figure} braintask.png
 :label: braintask
 :alt:Brain Task
 :align: center
+
+Example of Task Where Brain Performs Significantly Better Than Machine Learning
 ```
-
+:::{hint} Linker
 So how does it do that?
+:::
 
-## Energy efficient brain mechanisms
+## Learning From Natural Systems
 
 Honestly, we don't know yet, but we do know some pretty crazy and fascinating stuff about the mechanisms the brain uses.
 
+:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA?start=52&end=77
+:width: 100%
+:align: center
+:::
+
 Like the incredibly energy efficient way that brain cells signal to each other that is neither fully digital nor fully analogue. Some of the things the brain does are probably not relevant to machine learning, but some of them probably are since they're solving many of the same problems.
 
-```{figure} figures/brainsignal.png
+```{figure} brainsignal.png
 :label: brainsignal
 :alt:Brain Cell Signalling
 :align: center
+
+Diagram & Graph Showing Brain Cell Signalling Process
 ```
 
-Knowing about different approaches to intelligence taken by natural and artificial systems and their different constraints can help enrich our thinking about both.
+**Knowing about different approaches to intelligence taken by natural and artificial systems and their different constraints can help enrich our thinking about both.**
 
-## Course philosophy
+## Our Approach
+
+:::{iframe} https://www.youtube.com/embed/jhnuVDh2XKA?start=77
+:width: 100%
+:align: center
+:::
+
 
 So that's the approach we'll be taking in this course:
 
@@ -69,6 +106,13 @@ Instead, we'll focus on what we do know about the brain, and use those ideas pla
 
 And if, along the way, you discover that you actually do want to understand how the brain works, then this course can be a first step in that journey too.
 
-:::{seealso}
-Interested in doing a PhD? [See here](http://neural-reckoning.org/apply_phd.html).
+:::{seealso} For more
+:class: dropdown
+Interested in doing a PhD? [See here](http://neural-reckoning.org/apply_phd.html)
+
+[AI and neuroscience: the virtuous circle from Deep Mind podcast](https://www.youtube.com/watch?v=ExrXs7PCQpU)
+:::
+
+:::{seealso} That's it!
+In the next section, we’ll talk the course outline.
 :::

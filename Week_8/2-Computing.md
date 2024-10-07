@@ -2,7 +2,7 @@
 
 [Download the slides here](slides/W8-V1-computing.pptx)
 
-:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?end=43
 :width: 100%
 :::
 ---
@@ -20,6 +20,10 @@ In this section we'll go into more detail about neuromorphic computing by provid
 :::
 
 ## Overview
+
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?start=43&end=113
+:width: 100%
+:::
 
 Let’s start with a rough outline of some of the parts that tend to be involved.
 
@@ -42,6 +46,10 @@ Neuromorphic Computing Overview
 ```
 
 ## Emulating neurons
+
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?start=113&end=216
+:width: 100%
+:::
 
 The first step is simulating the neuron or components of the neuron.
 A very traditional approach that goes back to the beginning of neuromorphic computing is subthreshold analogue approaches. In these, you design an electrical circuit that behaves like a neuron model, with time constants that are comparable to biological ones so that it can operate in realtime.
@@ -83,6 +91,10 @@ And of course there are also hybrid approaches that combine these elements in di
 
 ## Receiving and Processing Spikes
 
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?start=216&end=278
+:width: 100%
+:::
+
 Once we’ve emulated the neuron, we need a way to receive and then process incoming spikes.
 
 The key problem here, which is common to both artificial and spiking neural networks is the matrix vector multiplication. This is typically the most expensive part of a neural network simulation, so speeding that up or reducing its power consumption is a critical part of the design of a neuromorphic system.
@@ -102,6 +114,10 @@ Memrisator grid configuration (See [paper](https://doi.org/10.1016/j.softx.2020.
 ```
 
 ## Sending spikes
+
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?start=278&end=352
+:width: 100%
+:::
 
 In addition to processing spikes that have been received, we also need to send spikes.
 The way the brain does that is simply to have one wire from each input to each output. Can we just do the same?
@@ -125,6 +141,10 @@ Common AER scheme in neuromorphic systems (See [source](https://jamesmccaffrey.w
 ```
 
 ## Learning
+
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?start=352&end=437
+:width: 100%
+:::
 
 The final ingredient we need is learning.
 The easiest thing to do is just to do the learning off the neuromorphic device and copy the synaptic weights and other parameters across.
@@ -152,6 +172,10 @@ STDP vs SDSP
 In some ways, learning is the big missing part of the neuromorphic computing story, and probably for the same reason that we don’t yet understand how the brain does learning with only local information.
 
 ## Systems
+
+:::{iframe} https://www.youtube.com/embed/Y1v3wi-djD0?start=437
+:width: 100%
+:::
 
 Let's finish this section with a quick look at some of the products available today, and how they use some of the components we’ve seen so far. As before, this isn’t an exhaustive list!
 

@@ -108,7 +108,7 @@ project:
     '\argmax': '\operatorname{argmax}'
 
 site:
-  template: book-theme
-  options:
-    favicon: logo-colour-small.png
-    logo: logo-colour-small.png
+  template: https://github.com/jfgavin/myst-splitscreen-theme.git
+  # options:
+  #   favicon: favicon.ico
+  logo: logo-colour.png

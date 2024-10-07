@@ -1,15 +1,12 @@
-# Decision making
+# Decision Making
 
-[Download the slides here](slides/W7-V0-decision-making.pptx)
+[Download the slides here](W7-V0-decision-making.pptx)
 
-:::{iframe} https://www.youtube.com/embed/n_05hOV2hS0
+:::{iframe} https://www.youtube.com/embed/n_05hOV2hS0?end=40
 :width: 100%
+:align: center
 :::
 ---
-
-```{danger} Work in progress
-The text below has been transcribed by hand from the video above but has not yet been reviewed. Please use the videos and slides as the primary material and the text as support until I have a chance to proofread everything. When I have done this, I will remove this message.
-```
 
 ## Introduction
 
@@ -23,23 +20,27 @@ We're going to focus on one particular aspect of decision making that has been s
 That is, how long does it take to make a decision based on a stream of information arriving continuously over time.
 :::
 
-## Two-alternative forced choice (2AFC)
+## Two-Alternative Forced Choice ({abbr}`2AFC(Two-Alternative Forced Choice)`)
 
-Let’s make this even more concrete with a very specific sort of task, the two-alternative forced choice, or 2AFC.
+:::{iframe} https://www.youtube.com/embed/n_05hOV2hS0?start=40&end=86
+:width: 100%
+:align: center
+:::
+
+Let’s make this even more concrete with a very specific sort of task, the two-alternative forced choice, or {abbr}`2AFC(Two-Alternative Forced Choice)`.
 
 In [this task](#2afc), participants are shown some sort of image or movie and asked to decide between two options. A common one is the random dot kinematogram, with random dots on the screen some of which are moving coherently either to the left or right, and some moving randomly. The participants have to determine which direction the coherent dots are moving, and sometimes they’re asked to make their decision as quickly as possible. The reaction time is the time between the start of the video and the moment when they press the button.
 
-```{figure} figures/taskreact.png
+```{figure} taskreact.png
 :label: 2afc
 :alt: Random Dot Kinematogram
 :align: center
-:width: 500px
 
 Random Dot Kinematogram Experiment
 ```
 If you run this experiment, you see characteristic skewed distributions of reaction times. [This data](#2afcresult) is actually from a slightly different task where participants were asked whether or not they had seen the image being shown before or not.
 
-```{figure} figures/taskresult.png
+```{figure} taskresult.png
 :label: 2afcresult
 :alt: 2AFC Experiment Results
 :align: center
@@ -47,7 +48,12 @@ If you run this experiment, you see characteristic skewed distributions of react
 2AFC Experiment Results (See [paper](https://doi.org/10.1037/0033-295X.85.2.59))
 ```
 
-## Drift diffusion / random walk model
+## Drift Diffusion / Random Walk Model
+
+:::{iframe} https://www.youtube.com/embed/n_05hOV2hS0?start=86&end=155
+:width: 100%
+:align: center
+:::
 
 There’s a beautifully simple theory for how we make these decisions which can account for these reaction times:
 
@@ -59,8 +65,7 @@ There’s a beautifully simple theory for how we make these decisions which can 
 :align: center
 
 Biased Random Walk With 10 Time Points
-```
--->
+``` -->
 (10res)=
 ![](#10-graph)
 
@@ -72,8 +77,7 @@ Biased Random Walk With 10 Time Points
 :align: center
 
 Biased Random Walk With 30 Time Points
-```
--->
+``` -->
 
 (30res)=
 ![](#30-graph)
@@ -86,8 +90,7 @@ Biased Random Walk With 30 Time Points
 :align: center
 
 Biased Random Walk With 100 Time Points
-```
--->
+``` -->
 
 (100res)=
 ![](#100-graph)
@@ -100,8 +103,7 @@ And all the way up to [1000](#1000res), this random walk looks more and more lik
 :align: center
 
 Biased Random Walk With 1000 Time Points
-```
--->
+``` -->
 
 (1000res)=
 ![](#1000-graph)
@@ -114,145 +116,140 @@ Biased Random Walk With 1000 Time Points
 :align: center
 
 Plot of Reaction Time Distributions for High and Low Decision Thresholds
-```
--->
+``` -->
 
 (highlow)=
 ![](#highlow-graph)
 
 * And sure enough, we get something that looks very much like the data from [experiments](#2afcresult).
 
-## Probabilistic interpretation
+## Probabilistic Interpretation
+
+:::{iframe} https://www.youtube.com/embed/n_05hOV2hS0?start=155&end=316
+:width: 100%
+:align: center
+:::
 
 That’s nice, but still this model might seem a bit ad hoc. Fortunately, it turns out that there’s a neat probabilistic interpretation of this model.
 
 * Let’s set up a probabilistic model of the task. We’ll say there’s a true direction $D$ that can be either $L$ or $R$, and both options are equally likely. You can actually modify this to make the options have different probabilities too.
 
 ```{math}
-\begin{gather}
     \text{True direction } 𝐷=𝐿 \text{ or } 𝐷=𝑅 \\
-    \text{ equally likely } \textcolor{#fcad03}{𝑃(𝐷=𝐿)}=\textcolor{#fcad03}{𝑃(𝐷=𝑅)}=1/2
-\end{gather}
+    \text{ equally likely } 𝑃(𝐷=𝐿)=𝑃(𝐷=𝑅)=1/2
 ```
-
 * Now we have the data observed at time t is a series of symbols $𝑋_𝑡$ each of which is $R$ or $L$.
 
 ```{math}
     \text{Observed data } 𝑋_𝑡=(𝑅,𝑅,𝐿,𝑅,𝐿,𝑅,𝑅,𝑅,…)
 ```
-
 * The probability you observe the correct symbol is $p$ and the probability you observe the incorrect symbol $1-p$.
 
 ```{math}
-\begin{gather}
-    \text{Probabilities } 𝑃(𝑋_𝑡=𝐷)= \textcolor{#03bafc}{𝑝} \text{ and } 𝑃(𝑋_𝑡=−𝐷)=1− \textcolor{#03bafc}{𝑝} \\
-    \text{where } \textcolor{#03bafc}{𝑝} > 1 − \textcolor{#03bafc}{𝑝}
-\end{gather}
+    \text{Probabilities } 𝑃(𝑋_𝑡=𝐷)=𝑝 \text{ and } 𝑃(𝑋_𝑡=−𝐷)=1−𝑝 \\
+    \text{where } 𝑝>1−𝑝
 ```
-
-* Now given we know the observed data and we want to infer the unknown value of $D$, we compute which of the two options is more likely. We’ll write that as $\textcolor{#a503fc}{r(X)}$ equals the ratio of the probability that $D=R$ given the observations $X$, divided by the probability that $D=L$. If this ratio is high then $D=R$ is much more likely, and if it’s low then $D=L$ is more likely.
+* Now given we know the observed data and we want to infer the unknown value of $D$, we compute which of the two options is more likely. We’ll write that as $r(X)$ equals the ratio of the probability that $D=R$ given the observations $X$, divided by the probability it’s $D=L$. If this ratio is high then $D=R$ is much more likely, and if it’s low then $D=L$ is more likely.
 
 ```{math}
-\begin{gather}
-    \text{Write } \textcolor{#a503fc}{r(X)}=\frac{𝑃(𝐷=𝑅|𝑿)}{𝑃(𝐷=𝐿|𝑿)} \text{ the likelihood ratio.} \\
+    \text{Write } 𝑟(𝑿)=\frac{𝑃(𝐷=𝑅│𝑿)}{𝑃(𝐷=𝐿│𝑿)} \text{ the likelihood ratio.} \\
     \text{If this is high then } 𝐷=𝑅 \text{ is more likely.}
-\end{gather}
 ```
-
+    
 * We use Bayes’ theorem to rewrite the probability that $D=R$ given X in terms of the probability of $X$ given $D=R$ times the probability $D=R$ over the probability of $X$. And the same thing for the probability that $D=L$ on the bottom.
 
 ```{math}
-    \textcolor{#a503fc}{r(X)}=\frac{𝑃(𝑿|𝐷=𝑅)_{\textcolor{#fcad03}{𝑃(𝐷=R)}/\textcolor{#128f04}{P(X)}}}{𝑃(𝑿|𝐷=L)_{\textcolor{#fcad03}{𝑃(𝐷=𝐿)}/\textcolor{#128f04}{P(X)}}}
+    𝑟(𝑿)=\frac{𝑃(𝑿│𝐷=𝑅)_{P(D=R)/P(𝑿)}}{𝑃(𝑿│𝐷=L)_{P(D=R)/P(𝑿)}}
 ```
 
-* The $\textcolor{#128f04}{P(X)}$ cancels and both the prior probabilities $D=R$ and $D=L$ are both ½ so they cancel too.
+* The $P(X)$ cancels and both the prior probabilities $D=R$ and $D=L$ are both ½ so they cancel too.
 
 ```{math}
-    \textcolor{#a503fc}{r(X)}=\frac{𝑃(𝑿|𝐷=𝑅)}{𝑃(𝑿|𝐷=L)}
+    𝑟(𝑿)=\frac{𝑃(𝑿│𝐷=𝑅)}{𝑃(𝑿│𝐷=L)}
 ```
 
 * The observations at different time points are independent, so we can expand these as a product of the probabilities at each time point.
 
 ```{math}
-    \textcolor{#a503fc}{r(X)}=\frac{\Pi_{t}𝑃(𝑿_t|𝐷=𝑅)}{\Pi_{t}𝑃(𝑿_t|𝐷=L)}
+    𝑟(𝑿)=\frac{\Pi_{t}𝑃(𝑿_t│𝐷=𝑅)}{\Pi_{t}𝑃(𝑿_t│𝐷=L)}
 ```
 
 * And this product is the same at the top and bottom so we can pull it out.
 
 ```{math}
-    \textcolor{#a503fc}{r(X)}=\Pi_{t}\frac{𝑃(𝑿_t|𝐷=𝑅)}{𝑃(𝑿_t|𝐷=L)}
+    𝑟(𝑿)=\Pi_{t}\frac{𝑃(𝑿_t│𝐷=𝑅)}{𝑃(𝑿_t│𝐷=L)}
 ```
 
 * Now to see what’s going on more clearly we take the log of this ratio to get the log likelihood ratio.
 
 ```{math}
-    log\textcolor{#a503fc}{r(X)}=log\Pi_{t}\frac{𝑃(𝑿_t|𝐷=𝑅)}{𝑃(𝑿_t|𝐷=L)}
+    log𝑟(𝑿)=log\Pi_{t}\frac{𝑃(𝑿_t│𝐷=𝑅)}{𝑃(𝑿_t│𝐷=L)}
 ```    
 
 * The log of a product is the sum of the logs.
 
 ```{math}
-    log\textcolor{#a503fc}{r(X)}=\Sigma_{t}log\frac{𝑃(𝑿_t|𝐷=𝑅)}{𝑃(𝑿_t|𝐷=L)}
+    log𝑟(𝑿)=\Sigma_{t}log\frac{𝑃(𝑿_t│𝐷=𝑅)}{𝑃(𝑿_t│𝐷=L)}
 ```
 
 * And we’ll write the individual terms as the “evidence at time $t$” $\epsilon(𝑋_𝑡)$.
 
 ```{math}
-     log\textcolor{#a503fc}{r(X)}=\Sigma_{t}\epsilon(𝑋_𝑡)
+     log𝑟(𝑿)=\Sigma_{t}\epsilon(𝑋_𝑡)
 ```
 
-* This evidence will be log of $\textcolor{#03bafc}{𝑝}/ 1- \textcolor{#03bafc}{𝑝}$ when $𝑋_𝑡=𝐿$. If $𝑋_𝑡=𝑅$ it’s log of $(1- \textcolor{#03bafc}{𝑝})/ \textcolor{#03bafc}{𝑝}$ but this is just negative log of $\textcolor{#03bafc}{𝑝} / 1- \textcolor{#03bafc}{𝑝}$.
+* This evidence will be log of $p/1-p$ when $𝑋_𝑡=𝐿$. If $𝑋_𝑡=𝑅$ it’s log of $(1-p)/p$ but this is just negative log of $p/1-p$.
 
 ```{math}
-\begin{gather}
-    \epsilon(𝑋_𝑡) = log\frac{\textcolor{#03bafc}{𝑝}}{1-\textcolor{#03bafc}{𝑝}} \text{ if } 𝑋_𝑡 = L \\
-    \text{or } -log\frac{\textcolor{#03bafc}{𝑝}}{1-\textcolor{#03bafc}{𝑝}} \text{ if } 𝑋_𝑡 = R
-\end{gather}
+    \epsilon(𝑋_𝑡) = log\frac{p}{1-p} \text{ if } 𝑋_𝑡 = L \\
+    \text{or } -log\frac{p}{1-p} \text{ if } 𝑋_𝑡 = R
 ```
 
-* With that we can write the log likelihood ratio as a constant term multiplied by the sum of terms $\textcolor{#fc0505}{\Sigma_{t}\delta(𝑋_𝑡)}$ which are $+1$ if $𝑋_𝑡=𝑅$ and $-1$ if $𝑋_𝑡=𝐿$.
+* With that we can write the log likelihood ratio as a constant term multiplied by the sum of terms $\delta(𝑋_𝑡)$ which are $+1$ if $𝑋_𝑡=𝑅$ and $-1$ if $𝑋_𝑡=𝐿$.
 
 ```{math}
-    log𝑟(𝑿)=log\frac{\textcolor{#03bafc}{𝑝}}{1-\textcolor{#03bafc}{𝑝}} * \textcolor{#fc0505}{\Sigma_{t}\delta(𝑋_𝑡)}
+    log𝑟(𝑿)=log\frac{p}{1-p} * \Sigma_{t}\delta(𝑋_𝑡)
 ```
 
 * But this sum is precisely the random walk we saw previously.
 
 ```{math}
-    \textcolor{#fc0505}{\Sigma_{t}\delta(𝑋_𝑡)} \text{ is random walk!}
+    \Sigma_{t}\delta(𝑋_𝑡) \text{ is random walk!}
 ```
 
-* When D=R the sum increases by 1 with probability $\textcolor{#03bafc}{𝑝}$ and decreases by 1 with probability $1-\textcolor{#03bafc}{𝑝}$, and vice versa if $D=L$.
+* When D=R the sum increases by 1 with probability $p$ and decreases by 1 with probability $1-p$, and vice versa if $D=L$.
+
 
 * We can understand the decision threshold in terms of probability now. We wait until the log likelihood ratio is bigger than some threshold $\theta$ or equivalently that the likelihood ratio is bigger than $𝑒^{\theta}$.
 
 ```{math}
-\begin{gather}
     \text{Decision threshold }\theta \text{: } 𝐷=𝑅 \text{ more likely if} \\
-    log\textcolor{#a503fc}{r(X)}>\theta \text{ or } \textcolor{#a503fc}{r(X)}>𝑒^\theta
-\end{gather}
+    log⁡𝑟(𝑋)>\theta \text{ or } 𝑟(𝑿)>𝑒^\theta
 ```
 
 * And this happens when the sum of the deltas is bigger than some threshold, precisely as in the drift diffusion model.
 
 ```{math}
-    \text{This is true if } \textcolor{#fc0505}{\Sigma_{t}\delta(𝑋_𝑡)} >  \text{const} = \theta / log\frac{\textcolor{#03bafc}{𝑝}}{1-\textcolor{#03bafc}{𝑝}}
+    \text{This is true if } \Sigma_{t}\delta(𝑋_𝑡) >  \text{const} = \theta / log\frac{p}{1-p}
 ```
-
-<!-- ```{figure} probinter.png
+```{figure} probinter.png
 :label: probi
 :alt: Probabilistic Interpretation of Model
 :align: center
 
 Probabilistic Interpretation of Model
 ```
--->
 
-## Electrophysiological data
+## Electrophysiological Data
+
+:::{iframe} https://www.youtube.com/embed/n_05hOV2hS0?start=316
+:width: 100%
+:align: center
+:::
 
 And finally, perhaps the best thing about this theory is that having come up with the model based on fitting behavioural observations and then finding a rigorous probabilistic interpretation, electrophysiological [experiments](#electrophys) find traces of these evidence accumulation processes across multiple different brain regions in multiple species.
 
-```{figure} figures/electro.jpg
+```{figure} electro.png
 :label: electrophys
 :alt: Experimental Evidence of Accumulation Processes Across Multiple Brain Regions and Species
 :align: center
