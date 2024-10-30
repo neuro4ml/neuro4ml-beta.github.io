@@ -77,7 +77,7 @@ If you just move the paddle a bit higher, a human player has no problem at all a
 
 Similarly, adding an unbreakable wall in grey.
 
-```{figure} paddle.png
+```{figure} figures/paddle.png
 :label: paddlegame
 :alt: Paddle Game Test Cases For Human vs Machine Retraining
 :align: center
@@ -88,7 +88,7 @@ Another example is an analysis of human learning of Atari games that were famous
 
 This study found that for some of the games, in under 15 minutes of training, humans could learn to play at a similar or better level than the deep RL agents after tens or even hundreds of hours of play.
 
-```{figure} atarigame.png
+```{figure} figures/atarigame.png
 :label: atarigame
 :alt: Learning Curves For Humans vs Machine in Atari Games
 :align: center
@@ -109,7 +109,7 @@ Although the situation has improved recently, machine learning solutions tend to
 
 Another way of seeing it is that they are prone to manipulation, what is sometimes called an adversarial attack.
 
-```{figure} braintask.png
+```{figure} figures/braintask.png
 :label: attack
 :alt: Example of Adversarial Attack
 :align: center
@@ -123,7 +123,7 @@ Part of the answer is known, that these networks treat texture as more important
 
 [Here](#cat) you can see if you take a picture of a cat and give it the texture of an elephant it’s recognised as an elephant although most people would still have said cat.
 
-```{figure} catpic.png
+```{figure} figures/catpic.png
 :label: cat
 :alt: Cat Textural Image vs Content
 :align: center
@@ -133,7 +133,7 @@ Cat Textural Manipulation Image vs Content (See [paper](https://doi.org/10.48550
 
 But you don’t even have to be as sophisticated as that, you can just slap on a bit of text and get it to change its mind.
 
-```{figure} textslap.png
+```{figure} figures/textslap.png
 :label: slap
 :alt: Apple Manipulation Using Text
 :align: center
@@ -152,7 +152,7 @@ These are just a few examples of what is a huge field, studying what it is that 
 But now we want to turn away from machine learning and talk about some of the challenges for neuroscience. For the first one, you might know that scientists like to study mice running around mazes. You might imagine something like [this](#mm1).
 
 
-```{figure} mousemaze1.png
+```{figure} figures/mousemaze1.png
 :label: mm1
 :alt: Mouse Maze Experiment
 :align: center
@@ -162,7 +162,7 @@ Mouse Maze Experiment
 
 Or if you’ve been visiting the English countryside a lot, maybe [this](#hedge)?
 
-```{figure} hedgemaze.png
+```{figure} figures/hedgemaze.png
 :label: hedge
 :alt: Hedge Maze
 :align: center
@@ -172,7 +172,7 @@ Hedge Maze
 
 But the reality is very often more like [this](#mm2). **In neuroscience, our experiments are usually incredible simple, often coming down to a binary choice.**
 
-```{figure} realisticmaze.png
+```{figure} figures/realisticmaze.png
 :label: mm2
 :alt: Realistic Mouse Maze Experiment
 :align: center
@@ -186,7 +186,7 @@ It’s not clear that this is good enough if we really want to understand intell
 
 And the same is true of our models. One of the most challenging datasets for biologically realistic spiking neural networks is the [Spiking Heidelberg Digits dataset](#dataset), which is a database with only twenty spoken words to classify.
 
-```{figure} heidelberg.png
+```{figure} figures/heidelberg.png
 :label: dataset
 :alt: Spiking Heidelberg Digits Dataset
 :align: center

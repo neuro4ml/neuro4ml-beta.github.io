@@ -35,7 +35,7 @@ One reason is that machine learning and neuroscience have had a really rich hist
 * From the [neuron to the perceptron](#n2p)
 * Or from the [retina to the convolutional neural network](#r2cnn).
 
-```{figure} neuron2perceptron.png
+```{figure} figures/neuron2perceptron.png
 :label: n2p
 :alt: Neuron to Perceptron
 :align: center
@@ -43,7 +43,7 @@ One reason is that machine learning and neuroscience have had a really rich hist
 Neuron to Perceptron
 ```
 
-```{figure} retina2cnn.png
+```{figure} figures/retina2cnn.png
 :label: r2cnn
 :alt: Retina to Convolutional Neural Network
 :align: center
@@ -58,7 +58,7 @@ In recent years they have started to drift apart, but that could change and know
 :align: center
 :::
 
-```{figure} braintask.png
+```{figure} figures/braintask.png
 :label: braintask
 :alt:Brain Task
 :align: center
@@ -80,7 +80,7 @@ Honestly, we don't know yet, but we do know some pretty crazy and fascinating st
 
 Like the incredibly energy efficient way that brain cells signal to each other that is neither fully digital nor fully analogue. Some of the things the brain does are probably not relevant to machine learning, but some of them probably are since they're solving many of the same problems.
 
-```{figure} brainsignal.png
+```{figure} figures/brainsignal.png
 :label: brainsignal
 :alt:Brain Cell Signalling
 :align: center

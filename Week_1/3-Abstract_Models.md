@@ -35,7 +35,7 @@ In older work you’ll often see the sigmoid function, and that’s partly becau
 
 Nowadays, you’ll more often see the {abbr}`ReLU(Rectified Linear Unit)`, which turns out to be much easier to work with and gives results that are often better.
 
-```{figure} artificial.png
+```{figure} figures/artificial.png
 :label: neuronmodel
 :alt: Models for Artifical Neurons
 :align: center
@@ -64,7 +64,7 @@ The source of the input current is incoming spikes from other neurons, and we’
 
 For this week, [here’s](#ideal) a simple, idealised picture of what this looks like. It’s from a model rather than real data, to more clearly illustrate the process.
 
-```{figure} biologicalneuron.png
+```{figure} figures/biologicalneuron.png
 :label: ideal
 :alt: Idealised Picture of Incoming Spikes
 :align: center
@@ -87,7 +87,7 @@ And then, more come in and eventually the cumulative effect is enough to push th
 
 The simplest way to model this is using the "integrate and fire neuron". [Here's](#integrateandfire) a plot of how it behaves.
 
-```{figure} IF.png
+```{figure} figures/IF.png
 :label: integrateandfire
 :alt: Integrate and Fire Model
 :align: center
@@ -139,7 +139,7 @@ This differential equation can be solved to show that in the absence of any inpu
 
 [Here's](#LIF) how that looks:
 
-```{figure} LIF.png
+```{figure} figures/LIF.png
 :label: LIF
 :alt: Leaky Integrate and Fire Model
 :align: center
@@ -164,7 +164,7 @@ In experiments, if you inject a constant input current ([horizontal line, top le
 
 On the other hand, if you inject a fluctuating input current ([top right](#reliable)) and do the same thing, you’ll see both the membrane potentials ([top right, above fluctuating current](#reliable)) and the spikes ([bottom right](#reliable)) tend to occur at the same times.
 
-```{figure} reliable1.png
+```{figure} figures/reliable1.png
 :label: reliable
 :alt: Spike Timing
 :align: center
@@ -180,7 +180,7 @@ We’ll come back to why this happens in a moment, but first let’s have a look
 
 We see the same thing with a {abbr}`LIF(Leaky Integrate-and-Fire)` neuron. [Here](#LIFSpike) are the plots for the membrane potentials as semi-transparent so that you can clearly see that both the spike times and membrane potentials tend to overlap for the fluctuating current, but not the constant current.
 
-```{figure} relaible2.png
+```{figure} figures/relaible2.png
 :label: LIFSpike
 :alt: LIF Spike Timing
 :align: center
@@ -190,7 +190,7 @@ LIF Spike Timing Graphs for Constant and Fluctuating Input Current (see [paper](
 
 But now if we repeat that with a simple integrate and fire neuron without a leak, you can see you get unreliable, random spike times for both the constant and fluctuating currents.
 
-```{figure} reliable3.png
+```{figure} figures/reliable3.png
 :label: LIFSpikeNOLEAK
 :alt: LIF Spike Timing
 :align: center
@@ -215,7 +215,7 @@ A simple answer is to change the model so that instead of having an instantaneou
 
 You can see on the bottom plot [here](#LIFimproved) that the input current is now behaving like the membrane potential before, with this exponential shape. You can think of that as a model of the internal processes of the synapses that we’ll talk more about next week.
 
-```{figure} LIFimprov.png
+```{figure} figures/LIFimprov.png
 :label: LIFimproved
 :alt: LIF Spike Timing Improved
 :align: center
@@ -247,7 +247,7 @@ If you feed a regular series of spikes into an {abbr}`LIF(Leaky Integrate-and-Fi
 
 However, real neurons have a memory of their recent activity. [Here](#memory) are some recordings from the [Allen Institute cell types database](https://celltypes.brain-map.org/data) that we’ll be coming back to later in the course.
 
-```{figure} spikefreq.png
+```{figure} figures/spikefreq.png
 :label: memory
 :alt: Spike Frequency Adaptation
 :align: center
@@ -263,7 +263,7 @@ Actually there are many, many different models for spike frequency adaptation. W
 
 In the simple model [here](#memorymodel), we just introduce a variable threshold represented by the variable $v_T$. Each time the neuron spikes, the threshold increases, making it more difficult to fire the next spike, before slowly decaying back to its starting value.
 
-```{figure} LIFadaptive.png
+```{figure} figures/LIFadaptive.png
 :label: memorymodel
 :alt: Spike Frequency Adaptation Memory Model
 :align: center
@@ -284,7 +284,7 @@ In general, spike frequency adaptation can give really rich and powerful dynamic
 
 This has been a quick tour of some features of abstract neuron models. There’s a lot more to know about if you want to dive deeper.
 
-```{figure} othermodels.png
+```{figure} figures/othermodels.png
 :label: moremodels
 :alt: More Neuron Models
 :align: center

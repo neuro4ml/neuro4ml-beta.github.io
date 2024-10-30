@@ -118,7 +118,7 @@ Neuron Activity
 
 We can capture this by thinking of the dendrites and axons as [cylinder](#cyl), then break these cylinders into a number of short cylindrical segments that are relatively uniform. We then think of each as being nodes in an electrical circuit as we did with the Hodgkin-Huxley neuron.
 
-```{figure} figures/cylinders.png
+```{figure} figures/figures/cylinders.png
 :label: cyl
 :alt: Cylinder Modeling of Dendrites and Axons
 :align: center
@@ -162,7 +162,7 @@ The problem is that it’s **too computationally demanding** to be used in a mac
 
 That’s where [Dendrify](https://dendrify.readthedocs.io/en/latest/) comes in. It’s a relatively new software package to automatically simplify these very complex models into something that can be easily simulated while still capturing a lot of the relevant dynamics, like [these examples here](#dendrifyslide). If you’re interested in exploring what dendritic structure could add to network level computations, this package is probably worth a look.
 
-```{figure} figures/dendrify.png
+```{figure} figures/figures/dendrify.png
 :label: dendrifyslide
 :alt: Dendrify Models
 :align: center

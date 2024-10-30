@@ -30,7 +30,7 @@ In turn, this leads to an input current following the same sort of equations we 
 
 One reason we might want to leave out some of this detail is that some of these changes will happen fast enough that modelling their temporal dynamics won't change much at the scale we're looking at.
 
-```{figure} synapse-modelsPicture1.png
+```{figure} figures/synapse-modelsPicture1.png
 :label: changes-pic
 :width: 100%
 :align: center
@@ -179,7 +179,7 @@ Repeated eigenvalues give
 
 So far we've looked at memoryless models of synapses, where previous activity doesn't affect what they do, but this isn't quite right. Neurotransmitters are released in vesicles, and after being released, a fraction of them will be unavailable if another spike comes along. This means that later spikes will likely have a smaller effect than earlier spikes. This is called **short-term synaptic depression**. We can model it by adding an extra variable $x$ that tracks what fraction of vesicles are available.
 
-```{figure} synapse-modelsPicture6.png
+```{figure} figures/synapse-modelsPicture6.png
 :label: pic6
 :width: 500px
 :align: center
@@ -195,7 +195,7 @@ However, it turns out that you also see cases where each subsequent spike has a 
 
 A simple model that encapsulates both effects is to add an extra variable, $u$, that represents the probability that an available vesicle will be released, and allow this to increase after each spike.
 
-```{figure} synapse-modelsPicture9.png
+```{figure} figures/synapse-modelsPicture9.png
 :label: pic19
 :width: 500px
 :align: center
@@ -257,7 +257,7 @@ However, when synapses are modelled with detail ion channel dynamics and spatial
 
 In shunting inhibition, a spike causes a local increase in conductance but with a reversal potential near to the resting potential. This means that on its own in the absence of other inputs, you wouldn't observe any effect on the membrane potential. However, it will reduce the effect of an excitatory synapse on the [dendrite](neuron) while having no effect on an excitatory synapse on the [soma](neuron) or on a different dendritic branch. This means that it can have a selective, divisive effect on excitatory inputs, something you wouldn’t easily be able to achieve otherwise.
 
-```{figure} synapse-modelsPicture11.png
+```{figure} figures/synapse-modelsPicture11.png
 :label: excite
 :width: 200px
 :align: center
@@ -299,7 +299,7 @@ W(\delta t) =
 \end{cases}
 ```
 
-```{figure} synapse-modelsPicture12.jpg
+```{figure} figures/synapse-modelsPicture12.jpg
 :label: stdp-graph
 :width: 500px
 :align: center
@@ -328,7 +328,7 @@ There are of course more complicated models too.
 I_{gap} = w(v_{pre} - v{post})
 ```
 
-```{figure} synapse-modelsPicture13.png
+```{figure} figures/synapse-modelsPicture13.png
 :label: gapjunc
 :width: 500px
 :align: center
@@ -338,7 +338,7 @@ Modeling Gap Junctions
 
 Gap junctions occur in many species, but a particularly interesting example is the tiny worm C elegans. Neuroscientists love it because it always has precisely 302 neurons with the same pattern of connections. It’s unusual though because they are mostly non-spiking, using gap junctions to communicate instead.
 
-```{figure} synapse-modelsPicture14.png
+```{figure} figures/synapse-modelsPicture14.png
 :label: p14
 :width: 400px
 :align: center

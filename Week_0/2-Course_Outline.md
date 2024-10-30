@@ -67,8 +67,7 @@ Unfortunately, we won’t be able to do interactive sessions online, but you wil
 
 There will also be a discussion group on Teams if you’re at Imperial, or [Discord](https://discord.gg/5U8SmJARcR) otherwise.
 
-```{figure} weekly-structure.png
-:label: structure
+```{figure} figures/weekly-structure.png
 :alt: Weekly Structure
 :align: center
 

@@ -33,7 +33,7 @@ The solution to prevent this, is to insulate the axon using a fatty substance ca
 These nodes of Ranvier are rich in voltage-gated channels. These effectively boost the signal as it travels along the axon and generate 'saltatory' or jumping conduction. 
 
 
-```{figure} Picture1.png
+```{figure} figures/Picture1.png
 :label: Fig1
 :alt: Image of an Axon
 :width: 100%
@@ -60,7 +60,7 @@ The pre-synaptic neuron has vesicles, 3D spheres, filled with chemical messenger
 
 The gap between the two is known as the '**synaptic cleft**'. While it is often drawn like a gap, there are actually proteins which reach across the cleft and hold the junction together.
 
-```{figure} Picture2.png
+```{figure} figures/Picture2.png
 :label: zoomed-terminal
 :width: 500px
 :align: center
@@ -85,7 +85,7 @@ This signal terminates when some neurotransmitter molecules diffuse away from th
 Many drugs used to treat depression work by inhibiting this type of reuptake channel. These are known as selective-serotonin reuptake inhibitors (SSRIs) and a common example is Prozac.
 :::
 
-```{figure} Picture3.png
+```{figure} figures/Picture3.png
 :label: binding
 :width: 500px
 :align: center
@@ -110,13 +110,13 @@ Individual neurons tend to contain and release multiple transmitters. For exampl
 
 Though in general, neurons release the same set of transmitters at all of their synapses. This is known as **Dale's principle**.
 
-```{figure} Picture4.png
+```{figure} figures/Picture4.png
 :label: neurotransmitters-image
-:alt: https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2015/07/Chemical-Structures-of-Neurotransmitters-2015.png?ssl=1 
+:alt: https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2015/07/figures/Chemical-Structures-of-Neurotransmitters-2015.png?ssl=1 
 :align: center
 :width: 100%
 
-Images of Glutamate, GABA and Dopamine (See [source](https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2015/07/Chemical-Structures-of-Neurotransmitters-2015.png?ssl=1 ))
+Images of Glutamate, GABA and Dopamine (See [source](https://i0.wp.com/www.compoundchem.com/wp-content/uploads/2015/07/figures/Chemical-Structures-of-Neurotransmitters-2015.png?ssl=1 ))
 ```
 
 ## Dale's Principle
@@ -133,7 +133,7 @@ So, is this a limitation of biology or an advantage?
 
 To explore this question, [Jonathan Cornford and colleagues](https://openreview.net/forum?id=eU776ZYxEpz) built {abbr}`ANNs(Artificial Neural Network)` in which each unit was either excitatory or inhibitory. Shown below in pink and blue. 
 
-```{figure} Picture5.png
+```{figure} figures/Picture5.png
 :label: ANNs
 :width: 500px
 :align: center
@@ -143,7 +143,7 @@ ANNs built by Jonathan Conford and his colleagues (See [paper](https://openrevie
 
 It turns out that these networks are difficult to train with standard gradient descent, and end up performing worse than a standard ANN. You can see this on the [graph below](Dale's-principle-graph), where the black curve shows the performance of a standard {abbr}`ANN(Artificial Neural Network)` and the green shows a simple implementation of Dale's principle. So, they introduced some corrections and were able to get networks which respect Dale's principle and **match** the performance of standard {abbr}`ANNs(Artificial Neural Network)`. This improved implementation of Dale's principle is shown in red. 
 
-```{figure} Picture6.png
+```{figure} figures/Picture6.png
 :label: Dale's-principle-graph
 :width: 500px
 :align: center
@@ -163,7 +163,7 @@ Once released, neurotransmitters diffuse across the synaptic cleft, bind recepto
 
 * **Ionotropic receptors** - receptors where neurotransmitter binding triggers a change in structure, causing an ion channel to open.
 
-```{figure} Picture7.jpg
+```{figure} figures/Picture7.jpg
 :label: ionotropic
 :width: 250px
 :align: center
@@ -173,7 +173,7 @@ Ionotropic Receptor (See [source](https://www.brainkart.com/article/Ion-Channels
 
 * **Metabotropic receptors** - receptors where binding triggers signaling cascades within the post-synaptic neuron, which may open ion channels or cause other effects.
 
-```{figure} Picture8.jpg
+```{figure} figures/Picture8.jpg
 :label: metabotropic
 :width: 600px
 :align: center

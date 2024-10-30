@@ -41,7 +41,7 @@ Though this misses the fact that cell A must spike first to contribute to B's fi
 
 Let's consider a pair of neurons. In the [figure below](#Synapses2Picture1), panel A illustrates that if the pre-synaptic neuron's spike occurs before or after the post-synaptic neuron, their relationship is causal or acausal. Panel B shows how this synapse's strength (on the y-axis) will be adjusted depending on the difference in spike timing between the two neurons. If the relationship is casual, so 'pre' precedes 'post' the strength will be increased or potentiated (shown in green). While if it is acausal, so 'pre' tends to follow 'post', then the strength will be decreased (shown in red).
 
-```{figure} Synapses2Picture1.jpg
+```{figure} figures/Synapses2Picture1.jpg
 :label: Synapses2Picture1
 :width: 330px
 :align: center
@@ -69,7 +69,7 @@ If we think about the structure of the synapse, then we can see that there are m
 
 But these are long-term changes, and synaptic weights can also change on much quicker timescales, on the order of hundreds to thousands of milliseconds. This is known as short-term plasticity.
 
-```{figure} Picture3.png
+```{figure} figures/Picture3.png
 :label: synapse
 :width: 500px
 :align: center
@@ -89,7 +89,7 @@ Short-term depression is caused by the lower levels of neurotransmitters availab
 
 Hence, short-term plasticity shows how a neuron's recent activity and the state of it's synapses influence it's weight dynamically. The fact that synapses will sometimes fail to send a signal may remind you of drop-out in machine learning, though in this case, individual connections are failing, not the entire unit. Yann Le Cun and colleagues explore this difference in a paper which you can read [here](http://dx.doi.org/10.4249/scholarpedia.3153).
 
-```{figure} Synapses2Picture2.png
+```{figure} figures/Synapses2Picture2.png
 :label: depressionsynapse
 :width: 500px
 :align: center
@@ -114,7 +114,7 @@ Just to give you a quick comparison between the two, the [graph below](Synapses2
 * Dropout in red - the error decreases with size
 * DropConnect in blue - the error is lower and more stable.
 
-```{figure} Synapses2Picture3.png
+```{figure} figures/Synapses2Picture3.png
 :label: Synapses2Picture3
 :width: 500px
 :align: center

@@ -13,7 +13,7 @@ project:
       orcid: https://orcid.org/0000-0002-2428-4605
       url: https://neural-reckoning.org/marcus_ghosh.html
       twitter: marcusghosh
-  github: https://github.com/neuro4ml/neuro4ml.github.io
+  github: https://github.com/neuro4ml/neuro4ml-beta.github.io
   exclude:
     - README.md
   toc:
