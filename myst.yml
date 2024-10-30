@@ -109,6 +109,6 @@ project:
 
 site:
   template: https://github.com/jfgavin/myst-splitscreen-theme.git
-  # options:
-  #   favicon: favicon.ico
-  logo: logo-colour.png
+  options:
+    favicon: logo-colour-small.png
+    logo: logo-colour-small.png
